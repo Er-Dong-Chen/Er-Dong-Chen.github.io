@@ -23,8 +23,8 @@
 
 ```dart
 MaterialApp(
-  builder: ComToastBuilder(),
-  navigatorObservers: [ComToastNavigatorObserver()],
+builder: ComToastBuilder(),
+navigatorObservers: [ComToastNavigatorObserver()],
 )
 ```
 
@@ -56,18 +56,46 @@ ComToast.dismiss();
 
 ```dart
 ComToast.show(
-  '自定义Toast',
-  config: ComToastConfig(
-    duration: const Duration(seconds: 3),
-    position: ComToastPosition.center,
-    backgroundColor: Colors.black87,
-    textColor: Colors.white,
-    fontSize: 16.0,
-    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
-    borderRadius: 8.0,
-    maxWidth: 200.0,
-    showShadow: true,
-  ),
+'自定义Toast',
+config: ComToastConfig(
+duration: const Duration(seconds: 3),
+position: ComToastPosition.center,
+backgroundColor: Colors.black87,
+textColor: Colors.white,
+fontSize: 16.0,
+padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+borderRadius: 8.0,
+maxWidth: 200.0,
+showShadow: true,
+),
+);
+
+ComToast.initTheme(
+theme: ComToastTheme(
+success: const ComToastConfig(
+iconWidget:
+Icon(Icons.check_circle, color: Color(0xFF10B981), size: 20),
+),
+error: const ComToastConfig(
+iconWidget: Icon(Icons.cancel, color: Color(0xFFEF4444), size: 20),
+),
+warning: const ComToastConfig(
+iconWidget:
+Icon(Icons.priority_high, color: Color(0xFFF59E0B), size: 20),
+),
+info: const ComToastConfig(
+iconWidget:
+Icon(Icons.info_outline, color: Color(0xFF3B82F6), size: 20),
+),
+loading: ComToastConfig(
+builder: (ctx) => const ComContainer(
+width: 120,
+child: ComLoading(),
+),
+clickThrough: false,
+duration: Duration.zero,
+),
+),
 );
 ```
 
@@ -75,21 +103,21 @@ ComToast.show(
 
 ```dart
 ComToast.custom(
-  builder: (context) => Container(
-    padding: const EdgeInsets.all(16),
-    decoration: BoxDecoration(
-      color: Colors.black87,
-      borderRadius: BorderRadius.circular(8),
-    ),
-    child: Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(Icons.star, color: Colors.yellow),
-        const SizedBox(width: 8),
-        Text('自定义Toast', style: TextStyle(color: Colors.white)),
-      ],
-    ),
-  ),
+builder: (context) => Container(
+padding: const EdgeInsets.all(16),
+decoration: BoxDecoration(
+color: Colors.black87,
+borderRadius: BorderRadius.circular(8),
+),
+child: Row(
+mainAxisSize: MainAxisSize.min,
+children: [
+Icon(Icons.star, color: Colors.yellow),
+const SizedBox(width: 8),
+Text('自定义Toast', style: TextStyle(color: Colors.white)),
+],
+),
+),
 );
 ```
 
@@ -106,8 +134,8 @@ ComToast.hideLoading();
 
 // 自动处理Loading的异步操作
 final result = await ComToast.autoLoading(
-  () => api.getData(),
-  message: '加载数据中...',
+() => api.getData(),
+message: '加载数据中...',
 );
 ```
 
@@ -115,21 +143,21 @@ final result = await ComToast.autoLoading(
 
 ```dart
 ComToast.customLoading(
-  builder: (context) => Container(
-    padding: const EdgeInsets.all(16),
-    decoration: BoxDecoration(
-      color: Colors.black87,
-      borderRadius: BorderRadius.circular(8),
-    ),
-    child: Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        CircularProgressIndicator(color: Colors.white),
-        const SizedBox(height: 8),
-        Text('自定义Loading', style: TextStyle(color: Colors.white)),
-      ],
-    ),
-  ),
+builder: (context) => Container(
+padding: const EdgeInsets.all(16),
+decoration: BoxDecoration(
+color: Colors.black87,
+borderRadius: BorderRadius.circular(8),
+),
+child: Column(
+mainAxisSize: MainAxisSize.min,
+children: [
+CircularProgressIndicator(color: Colors.white),
+const SizedBox(height: 8),
+Text('自定义Loading', style: TextStyle(color: Colors.white)),
+],
+),
+),
 );
 ```
 
@@ -139,10 +167,10 @@ ComToast.customLoading(
 
 ```dart
 ComToast.init(
-  config: ComToastConfig(
-    duration: const Duration(seconds: 2),
-    position: ComToastPosition.bottom,
-  ),
+config: ComToastConfig(
+duration: const Duration(seconds: 2),
+position: ComToastPosition.bottom,
+),
 );
 ```
 
