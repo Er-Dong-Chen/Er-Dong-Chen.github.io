@@ -3,18 +3,18 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "c0fbae69ddb10cd2e4849d5a0375dc92",
+const RESOURCES = {"flutter_bootstrap.js": "f0e47877a79eed245bd74607cb324c66",
 "version.json": "962411eb5eb33021e3a0ea9c5e9c2c3c",
-"index.html": "4650aa327cecbcb06cdf4598d44908e6",
-"/": "4650aa327cecbcb06cdf4598d44908e6",
-"main.dart.js": "77ec3b50a597c0752e9baad0c3dfb3de",
+"index.html": "de25a468a8e14629aa4a715874cdd372",
+"/": "de25a468a8e14629aa4a715874cdd372",
+"main.dart.js": "4cc4ee9d2202dadd58903d765d5f9acc",
 "flutter.js": "888483df48293866f9f41d3d9274a779",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "0867c3e13649ac4d06fe34b7b3ddce08",
+"manifest.json": "eab289062b67757f578ba1414b8555c7",
 "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/NOTICES": "0e26f6aa66961e75f8349baa6d759f6e",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
@@ -34,7 +34,12 @@ const RESOURCES = {"flutter_bootstrap.js": "c0fbae69ddb10cd2e4849d5a0375dc92",
 "canvaskit/chromium/canvaskit.wasm": "24c77e750a7fa6d474198905249ff506",
 "canvaskit/canvaskit.js": "140ccb7d34d0a55065fbd422b843add6",
 "canvaskit/canvaskit.wasm": "07b9f5853202304d3b0749d9306573cc",
-"canvaskit/skwasm_heavy.wasm": "8034ad26ba2485dab2fd49bdd786837b"};
+"canvaskit/skwasm_heavy.wasm": "8034ad26ba2485dab2fd49bdd786837b",
+".idea/workspace.xml": "b19adce24e7b266bd83e31a3a17026b7",
+".idea/modules.xml": "1eb3b065c55895e347308e50cd717dee",
+".idea/web.iml": "52db5efd0fe9f576a1302b8c4b5eac6c",
+".idea/misc.xml": "dd99d68e9eecd09ad6667609ff8e9862",
+".idea/caches/deviceStreaming.xml": "f13fac9b630475a70adf280db52e36fd"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",

@@ -1,12 +1,12 @@
 {
-    "name": "example",
-    "short_name": "example",
+    "name": "KChart Pro Demo",
+    "short_name": "KChart Pro",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
+    "background_color": "#F3F1EB",
+    "theme_color": "#FFFCF6",
+    "description": "Responsive K-line chart demo for desktop and mobile web.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
